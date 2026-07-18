@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Cool midnight stage — closer to reference */
+  --bg-deep: #06080f;
+  --bg-navy: #0c1220;
+  --glass: rgba(16, 24, 40, 0.42);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text: #f5f7fb;
+  --text-muted: #9aa3b5;
+  /* Soft safety yellow / gold — less neon than before */
+  --accent-yellow: #f0c93a;
+  --accent-yellow-soft: #ffe08a;
+  --accent-yellow-glow: rgba(240, 201, 58, 0.35);
+  --accent-blue: #5b8cff;
+  --risk-blue: #3d6fff;
+  --status-pending: #4a86f7;
+  --status-arrived: #f0c93a;
+  --positive: #34d399;
+  --atmosphere: #6ec9ff;
+  --panel-white: #f6f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  background:
+    radial-gradient(ellipse 90% 70% at 50% 42%, #121a2c 0%, transparent 58%),
+    radial-gradient(ellipse at 50% 100%, #0a1020 0%, var(--bg-deep) 55%);
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  letter-spacing: 0;
+}
+
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(20px) saturate(1.15);
+  -webkit-backdrop-filter: blur(20px) saturate(1.15);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+}
+
+.glass-strong {
+  background: rgba(10, 16, 28, 0.62);
+  backdrop-filter: blur(24px) saturate(1.1);
+  -webkit-backdrop-filter: blur(24px) saturate(1.1);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.label-pill {
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.marker-hit {
+  cursor: pointer;
+  pointer-events: auto;
+}
